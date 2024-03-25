@@ -86,5 +86,14 @@ public class CodeTest {
         System.out.println(calculator1.inToPost(calculator1.getElem(s4)));
         System.out.println(calculator1.compute(s4));
     }
+    @Test
+    public void KMPTest(){
+        String str1 = "bacbadbbabca";
+        String str2 = "aaaaaabccvbbbcaaa";
+        String str3 = "abc";
+//        int[] n = KMP.getNext(str2);
+//        Sorts.prtarr(n);
+        System.out.println(KMP.KMP(str1, str3));
+    }
 
 }
