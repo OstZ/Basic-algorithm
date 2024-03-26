@@ -4,8 +4,6 @@ import CS61B.Sorts;
 import DSA.*;
 import org.junit.Test;
 
-import java.lang.invoke.MutableCallSite;
-import java.util.LinkedList;
 
 import static org.junit.Assert.*;
 public class CodeTest {
@@ -94,6 +92,25 @@ public class CodeTest {
 //        int[] n = KMP.getNext(str2);
 //        Sorts.prtarr(n);
         System.out.println(KMP.KMP(str1, str3));
+    }
+    @Test
+    public void MazeTest(){
+        int[][] maze;
+        boolean flag;
+        while(true){
+            maze = Maze.mazeGen(10, 10, 0.4);
+            flag = Maze.findWay(maze, 0, 1);
+            if(flag) break;
+        }
+        System.out.println("find way out? " + flag);
+        Maze.prtMat(maze);
+    }
+
+    @Test
+    public void BubbleTest(){
+        int[] arr = {2, 1, 7, 5, 9, 10, 8, 3, 4};
+        BubbleSort.sort(arr);
+        Sorts.prtarr(arr);
     }
 
 }
