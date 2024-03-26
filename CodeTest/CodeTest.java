@@ -91,7 +91,7 @@ public class CodeTest {
         String str3 = "abc";
 //        int[] n = KMP.getNext(str2);
 //        Sorts.prtarr(n);
-        System.out.println(KMP.KMP(str1, str3));
+        System.out.println(KMP.kmp(str1, str3));
     }
     @Test
     public void MazeTest(){

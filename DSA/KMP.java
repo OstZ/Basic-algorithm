@@ -19,7 +19,7 @@ public class KMP {
         return next;
     }
 
-    public static int KMP(String s1, String s2){
+    public static int kmp(String s1, String s2){
         int len1 = s1.length();
         int len2 = s2.length();
         int q = 0;
