@@ -2,8 +2,11 @@ package CodeTest;
 import CS61B.MyArrayQueue;
 import CS61B.Sorts;
 import DSA.*;
+import JAVA.*;
 import org.junit.Test;
 
+
+import javax.print.attribute.standard.SheetCollate;
 
 import static org.junit.Assert.*;
 public class CodeTest {
@@ -111,6 +114,56 @@ public class CodeTest {
         int[] arr = {2, 1, 7, 5, 9, 10, 8, 3, 4};
         BubbleSort.sort(arr);
         Sorts.prtarr(arr);
+    }
+    @Test
+    public void SelectSortTest(){
+        int len = 8000;
+        int range = 7000000;
+        int[] arr = new int[len];
+        int[] arrTest = new int[len];
+        for(int i = 0; i < len; ++i) {
+
+            arr[i] = (int)(Math.random() * range);
+            arrTest[i] = arr[i];
+        }
+        double st, et;
+        //Sorts.shuffle(arr);
+        //System.out.println("After arrangement: ");
+        //st = System.currentTimeMillis();
+        arr = new int[]{1, 4, 2, 3, 3, 3, 10, 8 ,19, 11, 3, 12, 3, 21};
+        ShellSort.sort(arrTest);
+        QuickSort.sort(arr);
+        //et = System.currentTimeMillis();
+        //System.out.println("\n" + (et - st));
+        //assertArrayEquals(arr, arrTest);
+//        double totaltime = 0.0;
+//        int trail = 30;
+//        int i = 0;
+//        while(trail > i){
+//            Sorts.shuffle(arr);
+//            st = System.currentTimeMillis();
+//            QuickSort.sort(arr);
+//            et = System.currentTimeMillis();
+//            totaltime += (et - st);
+//            i++;
+//        }
+//        System.out.println("avg: " + totaltime / trail);
+    }
+
+    @Test
+    public void SearchTest(){
+        int[] arr = {3, 5, 6, 9, 12, 17};
+        //assertEquals(Search.binSearch(arr, 1), 0);
+        int[] arr1 = {4, 2, 1, 9, 3, 2};
+        for(int i = arr1.length -1; i > 0; i--)
+            for(int j = 0; j < i; ++j){
+                if(arr1[j] > arr1[j + 1]){
+                    int tmp = arr1[j];
+                    arr1[j] = arr1[j + 1];
+                    arr1[j + 1] = tmp;
+                }
+            }
+        Sorts.prtarr(arr1);
     }
 
 }
