@@ -1,4 +1,4 @@
-package DSA;
+package DSA.List;
 
 public class RPNCalculator {
     LinkedListStack<Integer> numstk;

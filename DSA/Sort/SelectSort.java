@@ -1,4 +1,4 @@
-package DSA;
+package DSA.Sort;
 
 public class SelectSort {
     public static void sort(int[] arr){

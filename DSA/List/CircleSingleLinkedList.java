@@ -1,4 +1,4 @@
-package DSA;
+package DSA.List;
 
 public class CircleSingleLinkedList {
     private int size;

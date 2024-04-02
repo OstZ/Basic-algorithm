@@ -1,4 +1,4 @@
-package DSA;
+package DSA.Sort;
 
 public class InsertSort {
     public static void sort(int[] arr){

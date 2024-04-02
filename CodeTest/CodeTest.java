@@ -2,11 +2,15 @@ package CodeTest;
 import CS61B.MyArrayQueue;
 import CS61B.Sorts;
 import DSA.*;
-import JAVA.*;
+import DSA.Sort.*;
+import DSA.List.*;
+import DSA.Sort.BubbleSort;
+import DSA.Sort.QuickSort;
+import DSA.Recursion.Maze;
 import org.junit.Test;
 
 
-import javax.print.attribute.standard.SheetCollate;
+import java.util.Arrays;
 
 import static org.junit.Assert.*;
 public class CodeTest {
@@ -112,12 +116,12 @@ public class CodeTest {
     @Test
     public void BubbleTest(){
         int[] arr = {2, 1, 7, 5, 9, 10, 8, 3, 4};
-        BubbleSort.sort(arr);
+        MergeSort.sort(arr);
         Sorts.prtarr(arr);
     }
     @Test
-    public void SelectSortTest(){
-        int len = 8000;
+    public void SortEfficTest(){
+        int len = 800000;
         int range = 7000000;
         int[] arr = new int[len];
         int[] arrTest = new int[len];
@@ -127,27 +131,43 @@ public class CodeTest {
             arrTest[i] = arr[i];
         }
         double st, et;
-        //Sorts.shuffle(arr);
-        //System.out.println("After arrangement: ");
-        //st = System.currentTimeMillis();
-        arr = new int[]{1, 4, 2, 3, 3, 3, 10, 8 ,19, 11, 3, 12, 3, 21};
-        ShellSort.sort(arrTest);
-        QuickSort.sort(arr);
-        //et = System.currentTimeMillis();
-        //System.out.println("\n" + (et - st));
-        //assertArrayEquals(arr, arrTest);
-//        double totaltime = 0.0;
-//        int trail = 30;
-//        int i = 0;
-//        while(trail > i){
-//            Sorts.shuffle(arr);
-//            st = System.currentTimeMillis();
-//            QuickSort.sort(arr);
-//            et = System.currentTimeMillis();
-//            totaltime += (et - st);
-//            i++;
-//        }
-//        System.out.println("avg: " + totaltime / trail);
+        double totaltime = 0.0;
+        int trail = 30;
+        int k = 0;
+        while(trail > k){
+            for(int i = 0; i < len; ++i) {
+
+                arr[i] = (int)(Math.random() * range);
+                arrTest[i] = arr[i];
+            }
+            st = System.currentTimeMillis();
+            RadixSort.sort(arr);
+            et = System.currentTimeMillis();
+            totaltime += (et - st);
+            k++;
+        }
+        System.out.println("avg: " + totaltime / trail + "ms");
+    }
+    @Test
+    public void SortCorectTest(){
+        int len = 50;
+        int range = 700;
+        int[] arr = new int[len];
+        int[] arrTest = new int[len];
+
+        int trail = 30;
+        int k = 0;
+        while(trail > k){
+            for(int i = 0; i < len; ++i) {
+                arr[i] = (int)(Math.random() * range);
+                arrTest[i] = arr[i];
+            }
+//            System.arraycopy(arr, 0, arrTest, 0, arr.length - 1);
+            Arrays.sort(arrTest);
+            RadixSort.sort(arr);
+            assertArrayEquals(arrTest, arr);
+            k++;
+        }
     }
 
     @Test

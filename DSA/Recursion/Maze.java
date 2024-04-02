@@ -1,4 +1,4 @@
-package DSA;
+package DSA.Recursion;
 
 public class Maze {
     public static void prtMat(int[][] mat){

@@ -1,4 +1,4 @@
-package DSA;
+package DSA.List;
 
 public class ArrStack {
     private int[] stack;

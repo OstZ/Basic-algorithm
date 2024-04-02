@@ -1,4 +1,4 @@
-package DSA;
+package DSA.Recursion;
 
 import CS61B.Sorts;
 

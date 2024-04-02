@@ -1,4 +1,4 @@
-package DSA;
+package DSA.Search;
 
 public class Search {
     public static int binSearch(int[] arr, int val){

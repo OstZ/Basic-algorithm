@@ -1,6 +1,6 @@
 package CodeTest;
 
-import DSA.DoubleLinkedList;
+import DSA.List.DoubleLinkedList;
 import org.junit.Test;
 
 public class DoubleLinkedListTest {
