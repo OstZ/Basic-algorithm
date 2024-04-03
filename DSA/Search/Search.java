@@ -11,4 +11,14 @@ public class Search {
         }
         return i;
     }
+    public static int interPolationSearch(int[] arr, int key){
+        int lo = 0, hi = arr.length - 1, mid;
+        while(lo < hi){
+            mid = lo + (key - arr[lo]) * (hi - lo) / (arr[hi] - arr[lo]);
+            if(arr[mid] == key) return mid;
+            else if(arr[mid] > key) hi = mid + 1;
+            else lo = mid + 1;
+        }
+        return -1;
+    }
 }

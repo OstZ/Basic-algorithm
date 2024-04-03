@@ -2,6 +2,7 @@ package CodeTest;
 import CS61B.MyArrayQueue;
 import CS61B.Sorts;
 import DSA.*;
+import DSA.Search.Search;
 import DSA.Sort.*;
 import DSA.List.*;
 import DSA.Sort.BubbleSort;
@@ -173,8 +174,8 @@ public class CodeTest {
     @Test
     public void SearchTest(){
         int[] arr = {3, 5, 6, 9, 12, 17};
-        //assertEquals(Search.binSearch(arr, 1), 0);
-        int[] arr1 = {4, 2, 1, 9, 3, 2};
+        assertEquals(Search.interPolationSearch(arr, 1), -1);
+   /*     int[] arr1 = {4, 2, 1, 9, 3, 2};
         for(int i = arr1.length -1; i > 0; i--)
             for(int j = 0; j < i; ++j){
                 if(arr1[j] > arr1[j + 1]){
@@ -183,7 +184,7 @@ public class CodeTest {
                     arr1[j + 1] = tmp;
                 }
             }
-        Sorts.prtarr(arr1);
+        Sorts.prtarr(arr1);*/
     }
 
 }

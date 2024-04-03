@@ -23,5 +23,6 @@ public class Basic {
     }
 
     public static void main(String[] args) {
+        Basic b0 = new Basic(9,9,9);
     }
 }
