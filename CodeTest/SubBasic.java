@@ -7,6 +7,6 @@ public class SubBasic extends Basic {
         super(age, num, id);
     }
 
-    public void prt(){
+    public static void prt(){
     }
 }

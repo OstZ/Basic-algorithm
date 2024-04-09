@@ -18,8 +18,8 @@ public class Basic {
         int age = 20;
         System.out.println(this.age);
     }
-    public static void prt(Basic b){
-        b.getAge();
+    public static void prt(){
+        System.out.println("Basic");;
     }
 
     public static void main(String[] args) {
