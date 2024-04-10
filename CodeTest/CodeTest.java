@@ -8,6 +8,7 @@ import DSA.List.*;
 import DSA.Sort.BubbleSort;
 import DSA.Sort.QuickSort;
 import DSA.Recursion.Maze;
+import JAVA.LearnString.LearnString;
 import org.junit.Test;
 
 
@@ -185,6 +186,11 @@ public class CodeTest {
                 }
             }
         Sorts.prtarr(arr1);*/
+    }
+    @Test
+    public void StringTest(){
+        String str = "12345678";
+        System.out.println(LearnString.reverse(str, 2, 4));
     }
 
 }
