@@ -7,9 +7,9 @@ public class Tree {
         TreeNode right;
     }
     public static TreeNode buildBinTree(int[] arr){
-        TreeNode myRoot = insert(null, 0);
+        TreeNode myRoot = null;
         for (int i : arr) {
-            insert(myRoot, i);
+            myRoot = insert(myRoot, i);
         }
         return myRoot;
     }
@@ -17,7 +17,7 @@ public class Tree {
         if(root != null){
             if(root.val > val) return binSearch(root.left, val);
             else if(root.val == val) return root;
-            else return binSearch(root.left, val);
+            else return binSearch(root.right, val);
         }
         return null;
     }
@@ -42,6 +42,8 @@ public class Tree {
 
     public static void main(String[] args) {
         int[] arr = {2, 3, 4, 1, 6, 7, 9};
-        inOrder(buildBinTree(arr));
+        TreeNode root = buildBinTree(arr);
+        TreeNode res = insert(root, 10);
+        inOrder(res);
     }
 }
