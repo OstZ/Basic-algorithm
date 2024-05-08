@@ -38,6 +38,38 @@ public class LearnCollection {
         while(it2.hasNext()) System.out.print(it2.next() + " ");
 
         //loop key-value directly from hashmap
+        for(int i = 0; i < 63; ++i){
+            hm0.put("value:" + i, i);
+        }
+        //hashtable
+        Hashtable<String, Integer> ht0 = new Hashtable<>();
+        ht0.put("2333", 89);
+        ht0.put("8999", 19);
+        System.out.println(ht0);
+
+
+        List<Integer> list0 = new ArrayList<>();
+        list0.add(90);
+        list0.add(70);
+        list0.add(10);
+        list0.get(0);
+
+        TreeSet<String> ts0 = new TreeSet<>();
+        ts0.add("lucy");
+        ts0.add("jack");
+        ts0.add("nancy");
+        ts0.add("0000");
+        ts0.add("1234");
+        ts0.add("3456");
+        System.out.println(ts0);
+
+        //treeMap
+        TreeMap<String, String> tm0 = new TreeMap<>();
+        tm0.put("2333", "9000");
+        tm0.put("2345", "80000");
+        tm0.put("666", "2050");
+        tm0.put("2333", "abc");
+        System.out.println(tm0);
 
     }
 }
