@@ -1,11 +1,16 @@
 package JAVA;
 
+import javax.swing.*;
 import java.util.Arrays;
+import java.util.TreeMap;
+import java.util.Vector;
 
 public class Basic {
     private int age = 10;
     int num = 10;
     protected int id = 9;
+    public Basic(){}
+
     public Basic(int age, int num, int id){
         this.age = age;
         this.num = num;
@@ -23,6 +28,8 @@ public class Basic {
     }
 
     public static void main(String[] args) {
-        Basic b0 = new Basic(9,9,9);
+        TreeMap<String, Integer> tm = new TreeMap<>();
+        tm.put("2333", 2333);
+        tm.put("34444", 2333);
     }
 }
